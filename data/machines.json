@@ -1,0 +1,67 @@
+[
+  {
+    "type": "SCH",
+    "name": "MBJ8",
+    "problemcode": {
+      "err1": "Error Meldung 1",
+      "err2": "Error Meldung 2",
+      "err3": "Error Meldung 3",
+      "err4": "Error Meldung 4",
+      "err5": "Error Meldung 5",
+      "err6": "Error Meldung 6",
+      "err7": "Error Meldung 7"
+    }
+  },
+  {
+    "type": "SCH",
+    "name": "MBJ8v",
+    "problemcode": {
+      "err1": "Error Meldung 1",
+      "err2": "Error Meldung 2",
+      "err3": "Error Meldung 3",
+      "err4": "Error Meldung 4",
+      "err5": "Error Meldung 5",
+      "err6": "Error Meldung 6",
+      "err7": "Error Meldung 7"
+    }
+  },
+  {
+    "type": "WE",
+    "name": "NFM",
+    "problemcode": {
+      "problem1": "Error Meldung 1",
+      "problem2": "Error Meldung 2",
+      "problem3": "Error Meldung 3",
+      "problem4": "Error Meldung 4",
+      "problem5": "Error Meldung 5",
+      "problem6": "Error Meldung 6",
+      "problem7": "Error Meldung 7"
+    }
+  },
+  {
+    "type": "WE",
+    "name": "NFMJ",
+    "problemcode": {
+      "problem1": "Error Meldung 1",
+      "problem2": "Error Meldung 2",
+      "problem3": "Error Meldung 3",
+      "problem4": "Error Meldung 4",
+      "problem5": "Error Meldung 5",
+      "problem6": "Error Meldung 6",
+      "problem7": "Error Meldung 7"
+    }
+  },
+  {
+    "type": "WE",
+    "name": "NG",
+    "problemcode": {
+      "problem1": "Error Meldung 1",
+      "problem2": "Error Meldung 2",
+      "problem3": "Error Meldung 3",
+      "problem4": "Error Meldung 4",
+      "problem5": "Error Meldung 5",
+      "problem": "Error Meldung 6",
+      "problem7": "Error Meldung 7"
+    }
+  }
+]
