@@ -6,7 +6,7 @@ import _ from "lodash";
 import bodyParser from "body-parser";
 import path from "path";
 
-const PORT = 3000;
+const PORT = 4000;
 const buildUrl = (version, path) => `/api/${version}/${path}`;
 const MACHINES_BASE_URL = buildUrl("v1", "machines");
 
@@ -24,19 +24,18 @@ server.get("/download/images/:imageName", (req, res) => {
 server.get(
   "/route-handlers",
   (req, res, next) => {
-    //beginning of route handler
-    res.send("learning route handlers is cool");
+    res.send("routhandler works!");
     next();
   },
   (req, res, next) => {
-    console.log("second handler");
+    console.log("second handler!");
     next();
   },
   (req, res) => {
-    console.log("third handler");
+    console.log("third handler!");
   }
 );
 
-server.listen(3000, () => {
+server.listen(4000, () => {
   console.log(`server started on port ${PORT}`);
 });
