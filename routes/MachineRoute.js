@@ -10,12 +10,14 @@ import {
   deleteMachineById,
 } from "../service/functions.js";
 
-const DB_URL = `mongodb+srv://robinhasler:IbawServiceTool@cluster0.txr0gzs.mongodb.net/`;
+require("dotenv").config();
+
+const DB_URL = process.env.DB_URL;
 const router = express.Router();
 
 let machinesArray = machines;
 
-mongoose.connect(DB_URL);
+mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 db.once("open", () => {
