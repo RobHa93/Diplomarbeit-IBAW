@@ -23,3 +23,7 @@
     Babel-Preset-Stage-0 ist ein npm-Paket, das eine Babel-Konfiguration für experimentelle JavaScript-Funktionen bereitstellt, die sich noch in einem frühen Stadium der Standardisierung befinden. Es ermöglicht Entwicklern, Funktionen aus dem Stage-0-Level von ECMAScript (wie Vorschläge für neue JavaScript-Syntax) zu nutzen und in ihrem Code zu verwenden, wodurch sie auf zukünftige Sprachfunktionen zugreifen können, bevor sie offiziell in den Sprachstandard aufgenommen werden.
 
     mongoose:
+    Mongoose ist eine Node.js-Bibliothek, die die Interaktion mit MongoDB-Datenbanken erleichtert, indem sie ein objektorientiertes Modell für das Mapping von Daten in die MongoDB-Datenstruktur bereitstellt. Im Wesentlichen ist Mongoose ein ODM (Object Data Modeling) für MongoDB.
+
+    dotenv:
+    Dotenv ist ein Node.js-Modul, das die Verwendung von Umgebungsvariablen in Node.js-Anwendungen vereinfacht, indem es eine .env-Datei im Root-Verzeichnis deiner Anwendung liest und die darin enthaltenen Umgebungsvariablen in den Prozessumgebungsvariablen verfügbar macht.
