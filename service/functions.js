@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const MachineSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   name: String,
-  type: String,
-  problemcode: String,
+  number: String,
+  description: String,
 });
 
 const MachineModel = mongoose.model("Machine", MachineSchema);
