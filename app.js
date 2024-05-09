@@ -4,12 +4,14 @@ import MachineRoute from "./routes/MachineRoute";
 import _ from "lodash";
 import bodyParser from "body-parser";
 import path from "path";
+import cors from "cors";
 
 const PORT = 4001;
 const buildUrl = (version, path) => `/api/${version}/${path}`;
 const MACHINES_BASE_URL = buildUrl("v1", "machines");
 
 const server = express();
+server.use(cors());
 
 server.use(morgan("tiny"));
 server.use(bodyParser.json());
