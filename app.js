@@ -1,12 +1,11 @@
 import express from "express";
 import morgan from "morgan";
 import MachineRoute from "./routes/MachineRoute";
-//import machines from "./data/machines.json";
 import _ from "lodash";
 import bodyParser from "body-parser";
 import path from "path";
 
-const PORT = 4000;
+const PORT = 4001;
 const buildUrl = (version, path) => `/api/${version}/${path}`;
 const MACHINES_BASE_URL = buildUrl("v1", "machines");
 
@@ -36,6 +35,6 @@ server.get(
   }
 );
 
-server.listen(4000, () => {
+server.listen(4001, () => {
   console.log(`server started on port ${PORT}`);
 });

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const MachineSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   name: String,
-  number: String,
+  number: Number,
   description: String,
 });
 
@@ -68,3 +68,12 @@ export async function deleteMachineById(id) {
     throw err;
   }
 }
+
+export const findMachineByNumber = async (number) => {
+  try {
+    const machine = await MachineModel.findOne({ number: number });
+    return machine;
+  } catch (error) {
+    throw new Error("Failed to find machine by number");
+  }
+};
