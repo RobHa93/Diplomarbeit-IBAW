@@ -1,42 +1,39 @@
 import express from "express";
 import morgan from "morgan";
-import MachineRoute from "./routes/MachineRoute";
-import _ from "lodash";
+import MachineRoute from "./routes/MachineRoute.js";
+import UserRoute from "./routes/userRoute.js";
 import bodyParser from "body-parser";
-import path from "path";
 import cors from "cors";
 
 const PORT = 4001;
-const buildUrl = (version, path) => `/api/${version}/${path}`;
-const MACHINES_BASE_URL = buildUrl("v1", "machines");
-
 const server = express();
-server.use(cors());
 
+server.use(cors());
 server.use(morgan("tiny"));
 server.use(bodyParser.json());
-server.use(express.static("public"));
 
-server.use(MACHINES_BASE_URL, MachineRoute);
+// Benutzer-Routen hinzufügen
+server.use("/api/v1/users", UserRoute);
 
-server.get("/download/images/:imageName", (req, res) => {
-  res.download(path.join("public", "images", req.params.imageName));
-});
+// Maschinen-Routen hinzufügen
+server.use("/api/v1/machines", MachineRoute);
+
+// Route-Handler für Testzwecke
 server.get(
   "/route-handlers",
   (req, res, next) => {
-    res.send("routhandler works!");
+    res.send("Route handler works!");
     next();
   },
   (req, res, next) => {
-    console.log("second handler!");
+    console.log("Second handler!");
     next();
   },
   (req, res) => {
-    console.log("third handler!");
+    console.log("Third handler!");
   }
 );
 
-server.listen(4001, () => {
-  console.log(`server started on port ${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
