@@ -8,6 +8,12 @@ import cors from "cors";
 const PORT = 4001;
 const server = express();
 
+// CORS konfigurieren
+const corsOptions = {
+  origin: "https://roha-ibaw.onrender.com", // Erlaubte Origin
+  optionsSuccessStatus: 200, // Für ältere Browser
+};
+
 server.use(cors());
 server.use(morgan("tiny"));
 server.use(bodyParser.json());
