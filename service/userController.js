@@ -1,6 +1,8 @@
-// userController.js
+// Funktion für den Loginvorgang
+
 import UserModel from "./userModel.js";
 
+// Funktion zum Abrufen aller Benutzer aus der Datenbank
 export const getAllUsers = async () => {
   try {
     const users = await UserModel.find();

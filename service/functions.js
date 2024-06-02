@@ -9,6 +9,7 @@ const MachineSchema = mongoose.Schema({
 
 const MachineModel = mongoose.model("Machine", MachineSchema);
 
+// Funktion zum Abrufen aller Maschinen aus der Datenbank
 export async function getAllMachines() {
   try {
     const machines = await MachineModel.find();
@@ -18,6 +19,7 @@ export async function getAllMachines() {
   }
 }
 
+// Funktion zum Abrufen einer Maschine anhand der ID
 export async function getMachineById(id) {
   try {
     const machine = await MachineModel.findById(id);
@@ -27,6 +29,7 @@ export async function getMachineById(id) {
   }
 }
 
+// Funktion zum Erstellen einer neuen Maschine
 export async function createMachine(machineData) {
   try {
     const id = new mongoose.Types.ObjectId();
@@ -39,6 +42,7 @@ export async function createMachine(machineData) {
   }
 }
 
+// Funktion zum Aktualisieren einer Maschine anhand der ID
 export async function updateMachineById(id, newData) {
   try {
     const machine = await MachineModel.findById(id);
@@ -56,6 +60,7 @@ export async function updateMachineById(id, newData) {
   }
 }
 
+// Funktion zum Löschen einer Maschine anhand der ID
 export async function deleteMachineById(id) {
   try {
     const machine = await MachineModel.findByIdAndDelete(id);
@@ -69,6 +74,7 @@ export async function deleteMachineById(id) {
   }
 }
 
+// Funktion zum Finden einer Maschine anhand der Nummer
 export const findMachineByNumber = async (number) => {
   try {
     const machine = await MachineModel.findOne({ number: number });
