@@ -5,7 +5,7 @@ Download Zip File from Github
 ### `npm i`
 to Download all the dependencies.
 
-# Then create the .env file to make a connection to MongoDB work.
+## Then create the .env file to make a connection to MongoDB work.
 Insert DB URL + JWT Secret Key.
 
 ( Start Render Application 
