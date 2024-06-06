@@ -6,7 +6,7 @@ Download Zip File from Github
 to Download all the dependencies.
 
 # Then create the .env file to make a connection to MongoDB work.
-For DB URL + JWT Secret Key.
+Insert DB URL + JWT Secret Key.
 
 ## Next to use the Application 
 
